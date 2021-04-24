@@ -50,7 +50,7 @@
   const dispatch = createEventDispatcher();
 
   let comboboxRef = null;
-  let searchRef = null;
+  export let searchRef = null;
   let hideDropdown = false;
   let selectedIndex = -1;
   let prevResults = "";
