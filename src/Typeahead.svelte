@@ -69,7 +69,7 @@
 
   async function select() {
     const result = results[selectedIndex];
-    const selectedValue = result === undefined ? null : extract(result.original);
+    const selectedValue = result === undefined ? "" : extract(result.original);
     const searchedValue = value;
 
     if (inputAfterSelect == "clear") value = "";
