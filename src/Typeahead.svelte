@@ -69,7 +69,7 @@
 
   async function select() {
     const result = results[selectedIndex];
-    const selectedValue = extract(result.original);
+    const selectedValue = result === undefined ? null : extract(result.original);
     const searchedValue = value;
 
     if (inputAfterSelect == "clear") value = "";
@@ -79,8 +79,8 @@
       selectedIndex,
       searched: searchedValue,
       selected: selectedValue,
-      original: result.original,
-      originalIndex: result.index,
+      original: result?.original ?? null,
+      originalIndex: result?.index ?? null,
     });
 
     await tick();
